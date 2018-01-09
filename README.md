@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/ass_maintainer-info_bases.svg)](https://badge.fury.io/rb/ass_maintainer-info_bases)
 # AssMaintainer::InfoBases
 
 Gem provides [infobase](https://github.com/leoniv/ass_maintainer-info_base)
