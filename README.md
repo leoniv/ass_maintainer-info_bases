@@ -27,12 +27,24 @@ Or install it yourself as:
 
 ### `TestInfoBase`
 
-TODO: Write usage instructions here
+```ruby
+  require 'ass_maintainer/info_bases/test_info_base'
 
-### `TmpInfoBase`
+  PLATFORM_REQUIRE = '~> 8.3.10.0'
 
-TODO: Write usage instructions here
+  # Build application from xml src
+  src = File.expand_path('../app.src')
+  fixt = proc do |ib|
+    # filling application data ...
+  end
 
+
+  ib = AssMaintainer::InfoBases::TestInfoBase
+    .new('test_app', 'File="tmp/test_app"', false,
+         template: src, fixtures: fixt, platform_require: PLATFORM_REQUIRE)
+  ib.rebuild!(:yes)
+
+```
 
 ## Development
 
