@@ -1,11 +1,9 @@
 require "test_helper"
 
-class AssMaintainer::InfoBasesTest < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::AssMaintainer::InfoBases::VERSION
-  end
-
-  def test_it_does_something_useful
-    assert false
+module AssMaintainer::InfoBasesTest
+  describe ::AssMaintainer::InfoBases::VERSION do
+    it 'has a version_number' do
+      ::AssMaintainer::InfoBases::VERSION.wont_be_nil
+    end
   end
 end
