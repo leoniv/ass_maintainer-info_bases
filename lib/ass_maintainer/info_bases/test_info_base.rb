@@ -72,9 +72,15 @@ module AssMaintainer
       # True if infobase exists and template and fixtures loaded if
       # +:template+, +:fixtures+ passed
       def built?
-        exists? && (template_loaded? || true) &&\
-          (fixtures_loaded? || true)
+        exists? && true_if_nil(template_loaded?) &&\
+          true_if_nil(fixtures_loaded?)
       end
+
+      def true_if_nil(true_false)
+        return true if true_false.nil?
+        true_false
+      end
+      private :true_if_nil
 
       def make_infobase!
         super
@@ -191,12 +197,6 @@ module AssMaintainer
       def load_cf
         cfg.load(template) && db_cfg.update
       end
-    end
-
-    class TmpInfoBase < TestInfoBase
-      require 'ass_maintainer/info_bases/support'
-      include AssMaintainer::InfoBases::Support::TmpPath
-
     end
   end
 end
