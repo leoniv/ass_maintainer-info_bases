@@ -26,7 +26,9 @@ Or install it yourself as:
 
 ## Usage
 
-### `TestInfoBase`
+### `class AssMaintainer::InfoBases::TestInfoBase`
+
+Class for for testing 1C:Enterprise application.
 
 ```ruby
   require 'ass_maintainer/info_bases/test_info_base'
@@ -47,9 +49,16 @@ Or install it yourself as:
 
 ```
 
-### `TmpInfoBase`
+### `class AssMaintainer::InfoBases::TmpInfoBase`
 
-#### Convert application xml source to +.cf+ file
+Temporary infobase. Proper for cases when require make temporary
+1C application do anything and remove after.
+Temporary infobase is file infobase always. It makes in temporary
+directory.
+
+#### Simple example.
+
+Convers application xml source to +.cf+ file
 
 ```ruby
 require 'ass_maintainer/info_bases/tmp_info_base'
@@ -72,7 +81,9 @@ tmp_ib.db_cfg.dump('tmp/app.cf')
 tmp_ib.rm!
 ```
 
-#### Update application +.cf+ file up to required version from update files +.cfu+
+#### More complex example.
+
+Update application +.cf+ file up to required version from update files +.cfu+
 
 ```ruby
 require 'ass_maintainer/info_bases/tmp_info_base'
