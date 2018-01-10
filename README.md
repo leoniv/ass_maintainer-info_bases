@@ -58,7 +58,7 @@ directory.
 
 #### Simple example.
 
-Convers application xml source to +.cf+ file
+Convers application xml source to `.cf` file
 
 ```ruby
 require 'ass_maintainer/info_bases/tmp_info_base'
@@ -83,7 +83,7 @@ tmp_ib.rm!
 
 #### More complex example.
 
-Update application +.cf+ file up to required version from update files +.cfu+
+Update application `.cf` file up to required version from update files `.cfu`
 
 ```ruby
 require 'ass_maintainer/info_bases/tmp_info_base'
