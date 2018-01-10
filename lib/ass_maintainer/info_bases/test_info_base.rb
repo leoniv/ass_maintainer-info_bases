@@ -1,7 +1,7 @@
 module AssMaintainer
   module InfoBases
     require 'ass_maintainer/info_base'
-    # Class for for testing 1C:Enterprise application.
+    # Class for testing 1C:Enterprise application.
     # It like {https://github.com/leoniv/ass_maintainer-info_base
     # AssMaintainer::InfoBase} but {#initialize} accepts two additional
     # {OPTIONS}:

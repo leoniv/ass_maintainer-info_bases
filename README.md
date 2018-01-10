@@ -28,7 +28,7 @@ Or install it yourself as:
 
 ### `class AssMaintainer::InfoBases::TestInfoBase`
 
-Class for for testing 1C:Enterprise application.
+Class for testing 1C:Enterprise application.
 
 ```ruby
   require 'ass_maintainer/info_bases/test_info_base'
