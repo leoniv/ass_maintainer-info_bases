@@ -79,6 +79,15 @@ tmp_ib = AssMaintainer::InfoBases::TmpInfoBase
 tmp_ib.make
 tmp_ib.db_cfg.dump('tmp/app.cf')
 tmp_ib.rm!
+
+# Or do with AssMaintainer::InfoBases::TmpInfoBase::Api
+
+include AssMaintainer::InfoBases::TmpInfoBase::Api
+
+with_tmp_ib src, platform_require: PLATFORM_REQUIRE do |ib|
+  ib.db_cfg.dump('tmp/app.cf')
+end
+
 ```
 
 #### More complex example.
