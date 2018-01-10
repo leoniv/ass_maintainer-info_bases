@@ -43,7 +43,7 @@ module AssMaintainer
     #          cfu_files.each do |cfu|
     #            ib.update_to(cfu, force)
     #          end
-    #          ib.cfg.dump(cfu_file)
+    #          ib.cfg.dump(cf_file)
     #        end
     #      end
     #    end
